@@ -31,6 +31,8 @@ describe('API integration test', () => {
     request.get(`${API_URL}/cart/d200-44a5-9de6`, (_err, res, _body) => {
       expect(res.statusCode).to.be.equal(404);
       done();
+    });
+  });
 
   it('POST /login returns valid response', (done) => {
     request.post(`${API_URL}/login`, {json: {userName: 'Pinkbrook'}}, (_err, res, body) => {
