@@ -1,5 +1,6 @@
-const { expect } = require('chai');
-const calculateNumber = require('./2-calcul_chai');
+import { expect } from 'chai';
+import calculateNumber from './2-calcul_chai.js';
+
 
 describe("calculateNumber()", () => {
   describe("SUM", () => {
@@ -28,8 +29,8 @@ describe("calculateNumber()", () => {
     it(`should return Error for inputs 1.7, 0 division`, () => {
       expect(calculateNumber("DIVIDE", 1.7, 0)).to.equal("Error");
     });
-    it(`should return 0.2 for inputs 4.6, 1.4`, () => {
-      expect(calculateNumber("DIVIDE", 4.6, 1.4)).to.equal(0.2);
+    it(`should return 0.2 for inputs 1.4, 4.6`, () => {
+      expect(calculateNumber("DIVIDE", 1.4, 4.6)).to.equal(0.2);
     });
   });
 });
